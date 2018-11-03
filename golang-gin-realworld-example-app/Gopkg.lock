@@ -55,12 +55,12 @@
   revision = "0a4f71a498b7c4812f64969510bcb4eca251e33a"
 
 [[projects]]
-  digest = "1:1314aac50122892d0e7a0ef68587cd2c8da1fee6b8895db5a1c815633ca06caf"
+  digest = "1:336a3f4034b62469e9adf046b084fa7b8b756339d5cff9e61bbd810adece75d5"
   name = "github.com/gosimple/slug"
   packages = ["."]
   pruneopts = "UT"
-  revision = "e756f2ec7e1e59e2ef20938fac5e677842641777"
-  version = "v1.1.0"
+  revision = "283c8d10b72e48ecfd721b1739de574713e57a0b"
+  version = "v1.3.0"
 
 [[projects]]
   digest = "1:fc08f87877e76b37f042bc11f22b49f83a3fb2aa3152592d48aac269c6927dbc"
@@ -132,18 +132,6 @@
   revision = "5efa3251c7f7d05e5d9704a69a984ec9f1386a40"
 
 [[projects]]
-  digest = "1:8ea79a13e62c52c3320488a58b7b3182b26da30a7b6fab61c3f2e56e4f199cec"
-  name = "github.com/wangzitian0/golang-gin-starter-kit"
-  packages = [
-    "articles",
-    "common",
-    "users",
-  ]
-  pruneopts = "UT"
-  revision = "9423bbefbc22d77939a18069037a3f08fd4f5592"
-  version = "0.0.6"
-
-[[projects]]
   branch = "master"
   digest = "1:1ecf2a49df33be51e757d0033d5d51d5f784f35f68e5a38f797b2d3f03357d71"
   name = "golang.org/x/crypto"
@@ -204,9 +192,6 @@
     "github.com/jinzhu/gorm",
     "github.com/jinzhu/gorm/dialects/sqlite",
     "github.com/stretchr/testify/assert",
-    "github.com/wangzitian0/golang-gin-starter-kit/articles",
-    "github.com/wangzitian0/golang-gin-starter-kit/common",
-    "github.com/wangzitian0/golang-gin-starter-kit/users",
     "golang.org/x/crypto/bcrypt",
     "gopkg.in/gin-gonic/gin.v1",
     "gopkg.in/go-playground/validator.v8",

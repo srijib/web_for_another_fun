@@ -7,9 +7,9 @@ import (
 	"github.com/gin-gonic/gin"
 
 	"github.com/jinzhu/gorm"
-	"github.com/wangzitian0/golang-gin-starter-kit/articles"
-	"github.com/wangzitian0/golang-gin-starter-kit/common"
-	"github.com/wangzitian0/golang-gin-starter-kit/users"
+	"github.com/liu0fanyi/web_for_another_fun/golang-gin-realworld-example-app/articles"
+	"github.com/liu0fanyi/web_for_another_fun/golang-gin-realworld-example-app/common"
+	"github.com/liu0fanyi/web_for_another_fun/golang-gin-realworld-example-app/users"
 )
 
 func Migrate(db *gorm.DB) {
@@ -28,11 +28,11 @@ func main() {
 	defer db.Close()
 
 	r := gin.Default()
-	config := cors.DefaultConfig()
-	config.AllowOrigins = []string{"http://localhost:4100"}
+	// config := cors.DefaultConfig()
+	// config.AllowOrigins = []string{"http://localhost:4100"}
 	// config.AllowOrigins == []string{"http://google.com", "http://facebook.com"}
 
-	r.Use(cors.New(config))
+	r.Use(cors.Default())
 
 	v1 := r.Group("/api")
 	users.UsersRegister(v1.Group("/users"))
