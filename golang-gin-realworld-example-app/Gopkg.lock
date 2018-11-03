@@ -19,14 +19,6 @@
   revision = "a539ee1a749a2b895533f979515ac7e6e0f5b650"
 
 [[projects]]
-  digest = "1:2b59aca2665ff804f6606c8829eaee133ddd3aefbc841014660d961b0034f888"
-  name = "github.com/gin-contrib/cors"
-  packages = ["."]
-  pruneopts = "UT"
-  revision = "cf4846e6a636a76237a28d9286f163c132e841bc"
-  version = "v1.2"
-
-[[projects]]
   branch = "master"
   digest = "1:36fe9527deed01d2a317617e59304eb2c4ce9f8a24115bcc5c2e37b3aee5bae4"
   name = "github.com/gin-contrib/sse"
@@ -118,6 +110,17 @@
   revision = "cb7f23ec59bec0d61b19c56cd88cee3d0cc1870c"
 
 [[projects]]
+  digest = "1:03f5e06d5aae81f1df6415c9c0b735891afacb34a6bc65345f0305484ad3d5d9"
+  name = "github.com/rs/cors"
+  packages = [
+    ".",
+    "wrapper/gin",
+  ]
+  pruneopts = "UT"
+  revision = "9a47f48565a795472d43519dd49aac781f3034fb"
+  version = "v1.6.0"
+
+[[projects]]
   digest = "1:9f38328bac3f86eec119f97e3ad817c10687ce648da46f822a242a52822b4eab"
   name = "github.com/stretchr/testify"
   packages = ["assert"]
@@ -157,14 +160,6 @@
   revision = "abf9c25f54453410d0c6668e519582a9e1115027"
 
 [[projects]]
-  digest = "1:2655728699af00d823b0a68bd7169fd241a30c04252f456b34421908701b9c3f"
-  name = "gopkg.in/gin-gonic/gin.v1"
-  packages = ["."]
-  pruneopts = "UT"
-  revision = "d459835d2b077e44f7c9b453505ee29881d5d12d"
-  version = "v1.2"
-
-[[projects]]
   digest = "1:1b4724d3c8125f6044925f02b485b74bfec9905cbf579d95aafd1a6c8f8447d3"
   name = "gopkg.in/go-playground/validator.v8"
   packages = ["."]
@@ -185,15 +180,14 @@
   input-imports = [
     "github.com/dgrijalva/jwt-go",
     "github.com/dgrijalva/jwt-go/request",
-    "github.com/gin-contrib/cors",
     "github.com/gin-gonic/gin",
     "github.com/gin-gonic/gin/binding",
     "github.com/gosimple/slug",
     "github.com/jinzhu/gorm",
     "github.com/jinzhu/gorm/dialects/sqlite",
+    "github.com/rs/cors/wrapper/gin",
     "github.com/stretchr/testify/assert",
     "golang.org/x/crypto/bcrypt",
-    "gopkg.in/gin-gonic/gin.v1",
     "gopkg.in/go-playground/validator.v8",
   ]
   solver-name = "gps-cdcl"

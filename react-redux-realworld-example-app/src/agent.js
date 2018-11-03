@@ -3,7 +3,7 @@ import _superagent from 'superagent';
 
 const superagent = superagentPromise(_superagent, global.Promise);
 
-const API_ROOT = 'http://localhost:8080/api';
+const API_ROOT = 'http://192.168.0.102:8080/api';
 
 const encode = encodeURIComponent;
 const responseBody = res => res.body;
@@ -28,17 +28,17 @@ const requests = {
 
 const Auth = {
   current: () =>
-    requests.get('/user'),
+    requests.get('/user/'),
   login: (email, password) =>
     requests.post('/users/login', { user: { email, password } }),
   register: (username, email, password) =>
-    requests.post('/users', { user: { username, email, password } }),
+    requests.post('/users/', { user: { username, email, password } }),
   save: user =>
-    requests.put('/user', { user })
+    requests.put('/user/', { user })
 };
 
 const Tags = {
-  getAll: () => requests.get('/tags')
+  getAll: () => requests.get('/tags/')
 };
 
 const limit = (count, p) => `limit=${count}&offset=${p ? p * count : 0}`;

@@ -28,6 +28,7 @@ func ArticlesAnonymousRegister(router *gin.RouterGroup) {
 
 func TagsAnonymousRegister(router *gin.RouterGroup) {
 	router.GET("/", TagList)
+	router.OPTIONS("/", TagNnull)
 }
 
 func ArticleCreate(c *gin.Context) {
@@ -213,4 +214,7 @@ func TagList(c *gin.Context) {
 	}
 	serializer := TagsSerializer{c, tagModels}
 	c.JSON(http.StatusOK, gin.H{"tags": serializer.Response()})
+}
+
+func TagNnull(c *gin.Context) {
 }

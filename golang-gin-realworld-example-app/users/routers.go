@@ -15,6 +15,7 @@ func UsersRegister(router *gin.RouterGroup) {
 
 func UserRegister(router *gin.RouterGroup) {
 	router.GET("/", UserRetrieve)
+	router.OPTIONS("/", UserNull)
 	router.PUT("/", UserUpdate)
 }
 
@@ -111,6 +112,9 @@ func UsersLogin(c *gin.Context) {
 func UserRetrieve(c *gin.Context) {
 	serializer := UserSerializer{c}
 	c.JSON(http.StatusOK, gin.H{"user": serializer.Response()})
+}
+
+func UserNull(c *gin.Context) {
 }
 
 func UserUpdate(c *gin.Context) {

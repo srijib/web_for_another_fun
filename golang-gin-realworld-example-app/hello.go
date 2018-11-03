@@ -3,8 +3,8 @@ package main
 import (
 	"fmt"
 
-	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
+	cors "github.com/rs/cors/wrapper/gin"
 
 	"github.com/jinzhu/gorm"
 	"github.com/liu0fanyi/web_for_another_fun/golang-gin-realworld-example-app/articles"
@@ -32,7 +32,7 @@ func main() {
 	// config.AllowOrigins = []string{"http://localhost:4100"}
 	// config.AllowOrigins == []string{"http://google.com", "http://facebook.com"}
 
-	r.Use(cors.Default())
+	r.Use(cors.AllowAll())
 
 	v1 := r.Group("/api")
 	users.UsersRegister(v1.Group("/users"))
